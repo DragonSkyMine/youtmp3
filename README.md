@@ -1,1 +1,1 @@
-This repo is juste a bash script create to help everybody to download youtube videos
+This repo is just a bash script create to help everybody to download youtube videos
