@@ -1,0 +1,11 @@
+#!/bin/bash
+cd $HOME/Musique/
+if [ $1 = "-list" ]
+then 
+	youtube-dl -x --yes-playlist --audio-format opus --audio-quality 0 -o '%(playlist)s/%(title)s.%(ext)s' $2
+elif [ $1 = "-user" ]
+then
+	youtube-dl -i -x --audio-format opus --audio-quality 0 -o '%(uploader)s/%(title)s.%(ext)s' ytuser:$2
+else
+	youtube-dl -i -x --audio-format opus --audio-quality 0 -o '%(title)s.%(ext)s' $1
+fi
